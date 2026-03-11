@@ -49,12 +49,6 @@ mvn spring-boot:run
 
 The application will start on **http://localhost:8080**
 
-### Using Java Directly (From Built JAR)
-
-```bash
-java -jar target/order-processing-0.0.1-SNAPSHOT.jar
-```
-
 ## Configuration
 
 Application properties are defined in `src/main/resources/application.properties`:
@@ -98,7 +92,6 @@ Once the application is running:
 - `GET /actuator/health` - Application health status
 - `GET /actuator/metrics` - Available metrics
 - `GET /actuator/info` - Application information
-- `GET /actuator/prometheus` - Prometheus metrics
 
 ## Database
 
@@ -140,12 +133,6 @@ mvn clean package
 ```
 
 This creates a JAR file in `target/` directory.
-
-### Run Built Application
-
-```bash
-java -jar target/order-processing-0.0.1-SNAPSHOT.jar
-```
 
 ## Dependencies
 
