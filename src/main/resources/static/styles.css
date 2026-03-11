@@ -1,0 +1,80 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.card {
+    border-radius: 0.75rem;
+}
+
+.badge-status {
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+}
+
+.badge-status.PENDING {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.badge-status.PROCESSING {
+    background-color: #cfe2ff;
+    color: #084298;
+}
+
+.badge-status.SHIPPED {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.badge-status.DELIVERED {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #0f5132;
+}
+
+.badge-status.CANCELLED {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.order-item-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.order-item-row input {
+    font-size: 0.9rem;
+}
+
+/* Cart styling */
+#selected-items .bg-light {
+    background-color: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+}
+
+#selected-items .border {
+    border-color: #dee2e6 !important;
+}
+
+#selected-items .btn-outline-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.order-item-row button {
+    padding: 0.2rem 0.5rem;
+}
+
+.clickable-row {
+    cursor: pointer;
+}
+
+.clickable-row:hover {
+    background-color: #f8f9fa;
+}
+

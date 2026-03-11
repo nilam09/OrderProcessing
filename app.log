@@ -1,0 +1,578 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-03-10T17:09:59.632+05:30  INFO 78022 --- [order-processing] [           main] c.e.o.OrderProcessingApplication         : Starting OrderProcessingApplication v0.0.1-SNAPSHOT using Java 24.0.1 with PID 78022 (/Users/nilamchaudhari/OrderProcessing/target/order-processing-0.0.1-SNAPSHOT.jar started by nilamchaudhari in /Users/nilamchaudhari/OrderProcessing)
+2026-03-10T17:09:59.633+05:30  INFO 78022 --- [order-processing] [           main] c.e.o.OrderProcessingApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-03-10T17:10:00.071+05:30  INFO 78022 --- [order-processing] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-10T17:10:00.092+05:30  INFO 78022 --- [order-processing] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 3 JPA repository interfaces.
+2026-03-10T17:10:00.351+05:30  INFO 78022 --- [order-processing] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-03-10T17:10:00.357+05:30  INFO 78022 --- [order-processing] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-10T17:10:00.357+05:30  INFO 78022 --- [order-processing] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-10T17:10:00.368+05:30  INFO 78022 --- [order-processing] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 708 ms
+2026-03-10T17:10:00.474+05:30  INFO 78022 --- [order-processing] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-10T17:10:00.496+05:30  INFO 78022 --- [order-processing] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-10T17:10:00.684+05:30  INFO 78022 --- [order-processing] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-10T17:10:00.696+05:30  INFO 78022 --- [order-processing] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-10T17:10:03.478+05:30  INFO 78022 --- [order-processing] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57bfca3a
+2026-03-10T17:10:03.479+05:30  INFO 78022 --- [order-processing] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-10T17:10:03.752+05:30  WARN 78022 --- [order-processing] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-10T17:10:04.828+05:30  INFO 78022 --- [order-processing] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://dpg-d6lvoevafjfc738prf70-a.oregon-postgres.render.com:5432/orderprocessingdb_719k]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.3
+	Default catalog/schema: orderprocessingdb_719k/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-10T17:10:05.210+05:30  INFO 78022 --- [order-processing] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-10T17:10:07.600+05:30  INFO 78022 --- [order-processing] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T17:10:07.649+05:30  INFO 78022 --- [order-processing] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-10T17:10:07.791+05:30  WARN 78022 --- [order-processing] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-10T17:10:07.823+05:30  INFO 78022 --- [order-processing] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-03-10T17:10:08.085+05:30  INFO 78022 --- [order-processing] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-03-10T17:10:08.116+05:30  INFO 78022 --- [order-processing] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-03-10T17:10:08.122+05:30  INFO 78022 --- [order-processing] [           main] c.e.o.OrderProcessingApplication         : Started OrderProcessingApplication in 8.66 seconds (process running for 8.95)
+2026-03-10T17:10:08.124+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Order Status Scheduler Running ===
+2026-03-10T17:10:08.125+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : Attempting to move all PENDING orders to PROCESSING status...
+2026-03-10T17:10:08.156+05:30  INFO 78022 --- [order-processing] [           main] c.e.o.config.SecurityConfig              : === Existing users in database ===
+2026-03-10T17:10:08.502+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0
+2026-03-10T17:10:08.537+05:30 DEBUG 78022 --- [order-processing] [   scheduling-1] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+2026-03-10T17:10:09.060+05:30  INFO 78022 --- [order-processing] [           main] c.e.o.config.SecurityConfig              : user=admin, role=ADMIN, passHash=$2a$10$fqAeYc7OivtC7t4Xb/7GdultVH5gJaGsn4Azb9Ivplf6FsxO7VmMy
+2026-03-10T17:10:09.060+05:30  INFO 78022 --- [order-processing] [           main] c.e.o.config.SecurityConfig              : user=customer, role=CUSTOMER, passHash=$2a$10$FxSd.Rs5DN5wgl4DeonrSegcRDo6vlrWBVe6Y2hzuCCvBzJZAuyeq
+2026-03-10T17:10:09.066+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Scheduler execution completed ===
+2026-03-10T17:10:09.075+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:10:09.339+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:10:09.593+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:10:09.926+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+2026-03-10T17:10:10.188+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : update users set email=?,name=?,password=?,role=?,username=? where id=?
+Hibernate: update users set email=?,name=?,password=?,role=?,username=? where id=?
+2026-03-10T17:10:10.692+05:30  INFO 78022 --- [order-processing] [           main] c.e.o.config.SecurityConfig              : ✓ Admin user exists; password reset to 'password'
+2026-03-10T17:10:10.693+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:10:11.026+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.id=?
+2026-03-10T17:10:11.286+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : update users set email=?,name=?,password=?,role=?,username=? where id=?
+Hibernate: update users set email=?,name=?,password=?,role=?,username=? where id=?
+2026-03-10T17:10:11.841+05:30  INFO 78022 --- [order-processing] [           main] c.e.o.config.SecurityConfig              : ✓ Customer user exists; password reset to 'password'
+2026-03-10T17:10:11.849+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : select count(*) from products p1_0
+Hibernate: select count(*) from products p1_0
+2026-03-10T17:10:12.456+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:10:12.764+05:30 DEBUG 78022 --- [order-processing] [           main] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:10:26.794+05:30  INFO 78022 --- [order-processing] [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-10T17:10:26.795+05:30  INFO 78022 --- [order-processing] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-10T17:10:26.795+05:30  INFO 78022 --- [order-processing] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-03-10T17:10:26.863+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:10:27.466+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:10:28.110+05:30  WARN 78022 --- [order-processing] [nio-8080-exec-2] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-03-10T17:10:30.963+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:10:31.597+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+2026-03-10T17:10:32.187+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:10:32.515+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-5] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+2026-03-10T17:10:33.426+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:10:33.836+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+2026-03-10T17:10:34.390+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:10:34.747+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-9] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+2026-03-10T17:11:26.782+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:11:27.379+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-1] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:12:26.783+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:12:27.370+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:13:26.802+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:13:27.386+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:14:26.783+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:14:27.402+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-4] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:15:08.127+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Order Status Scheduler Running ===
+2026-03-10T17:15:08.127+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : Attempting to move all PENDING orders to PROCESSING status...
+2026-03-10T17:15:08.376+05:30 DEBUG 78022 --- [order-processing] [   scheduling-1] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+2026-03-10T17:15:08.886+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Scheduler execution completed ===
+2026-03-10T17:15:26.784+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:15:27.959+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-5] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:16:26.778+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:16:27.356+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-6] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:17:26.781+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:17:27.348+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:18:26.782+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:18:27.387+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-8] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:19:26.796+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:19:27.376+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-9] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:20:08.128+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Order Status Scheduler Running ===
+2026-03-10T17:20:08.130+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : Attempting to move all PENDING orders to PROCESSING status...
+2026-03-10T17:20:08.385+05:30 DEBUG 78022 --- [order-processing] [   scheduling-1] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+2026-03-10T17:20:08.884+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Scheduler execution completed ===
+2026-03-10T17:20:26.789+05:30 DEBUG 78022 --- [order-processing] [io-8080-exec-10] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:20:27.362+05:30 DEBUG 78022 --- [order-processing] [io-8080-exec-10] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:21:26.823+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:21:27.402+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-1] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:22:26.794+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:22:27.384+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:22:36.135+05:30  WARN 78022 --- [order-processing] [l-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@45ec04ca (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-10T17:23:26.778+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:23:27.355+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:24:26.780+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:24:27.388+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-4] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:25:08.110+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Order Status Scheduler Running ===
+2026-03-10T17:25:08.110+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : Attempting to move all PENDING orders to PROCESSING status...
+2026-03-10T17:25:08.360+05:30 DEBUG 78022 --- [order-processing] [   scheduling-1] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+2026-03-10T17:25:08.900+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Scheduler execution completed ===
+2026-03-10T17:25:26.768+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:25:27.337+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-5] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:26:26.769+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:26:27.361+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-6] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:27:26.768+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:27:27.361+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:28:26.772+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:28:27.444+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-8] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:29:26.774+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:29:27.399+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-9] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:30:01.679+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:30:02.274+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-1] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:30:02.805+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:30:03.243+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+2026-03-10T17:30:08.109+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Order Status Scheduler Running ===
+2026-03-10T17:30:08.109+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : Attempting to move all PENDING orders to PROCESSING status...
+2026-03-10T17:30:08.355+05:30 DEBUG 78022 --- [order-processing] [   scheduling-1] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+2026-03-10T17:30:08.891+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Scheduler execution completed ===
+2026-03-10T17:30:22.072+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:30:22.653+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-5] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+2026-03-10T17:30:26.763+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:30:27.380+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:30:52.582+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:30:53.193+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-8] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+2026-03-10T17:31:02.399+05:30 DEBUG 78022 --- [order-processing] [io-8080-exec-10] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:31:02.983+05:30 DEBUG 78022 --- [order-processing] [io-8080-exec-10] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+2026-03-10T17:31:26.766+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:31:27.324+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:32:26.761+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:32:27.347+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:33:26.782+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:33:27.394+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-4] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:34:26.764+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:34:27.364+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-5] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:35:08.110+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Order Status Scheduler Running ===
+2026-03-10T17:35:08.110+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : Attempting to move all PENDING orders to PROCESSING status...
+2026-03-10T17:35:08.412+05:30 DEBUG 78022 --- [order-processing] [   scheduling-1] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+2026-03-10T17:35:08.977+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Scheduler execution completed ===
+2026-03-10T17:35:26.760+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:35:27.352+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-6] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:36:26.766+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:36:27.329+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:37:26.779+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:37:27.372+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-8] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:38:26.769+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:38:27.376+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-9] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:39:26.767+05:30 DEBUG 78022 --- [order-processing] [io-8080-exec-10] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:39:27.449+05:30 DEBUG 78022 --- [order-processing] [io-8080-exec-10] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:40:08.113+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Order Status Scheduler Running ===
+2026-03-10T17:40:08.114+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : Attempting to move all PENDING orders to PROCESSING status...
+2026-03-10T17:40:08.366+05:30 DEBUG 78022 --- [order-processing] [   scheduling-1] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+2026-03-10T17:40:08.864+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Scheduler execution completed ===
+2026-03-10T17:40:26.771+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:40:27.342+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:41:26.771+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:41:27.335+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:42:26.776+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:42:27.495+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-4] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:42:45.263+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:42:45.813+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-6] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+2026-03-10T17:42:59.450+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:43:00.033+05:30 ERROR 78022 --- [order-processing] [nio-8080-exec-7] c.e.o.config.GlobalExceptionHandler      : Unexpected error: 
+
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "1&expand=product"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:295) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:134) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:174) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.18.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:247) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+Caused by: java.lang.NumberFormatException: For input string: "1&expand=product"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) ~[na:na]
+	at java.base/java.lang.Long.parseLong(Long.java:594) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:950) ~[na:na]
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:204) ~[spring-core-7.0.5.jar!/:7.0.5]
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115) ~[spring-beans-7.0.5.jar!/:7.0.5]
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:434) ~[spring-beans-7.0.5.jar!/:7.0.5]
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:407) ~[spring-beans-7.0.5.jar!/:7.0.5]
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:158) ~[spring-beans-7.0.5.jar!/:7.0.5]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:75) ~[spring-beans-7.0.5.jar!/:7.0.5]
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:51) ~[spring-beans-7.0.5.jar!/:7.0.5]
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:843) ~[spring-context-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.convertIfNecessary(AbstractNamedValueMethodArgumentResolver.java:287) ~[spring-web-7.0.5.jar!/:7.0.5]
+	... 115 common frames omitted
+
+2026-03-10T17:43:04.651+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:43:05.324+05:30  WARN 78022 --- [order-processing] [nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /api/orders&expand=product
+2026-03-10T17:43:05.325+05:30 ERROR 78022 --- [order-processing] [nio-8080-exec-9] c.e.o.config.GlobalExceptionHandler      : Unexpected error: 
+
+org.springframework.web.servlet.NoHandlerFoundException: No endpoint GET /api/orders&expand=product.
+	at org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1177) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:953) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.18.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:247) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.3.jar!/:7.0.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+
+2026-03-10T17:43:26.765+05:30 DEBUG 78022 --- [order-processing] [io-8080-exec-10] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:43:27.417+05:30 DEBUG 78022 --- [order-processing] [io-8080-exec-10] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:43:34.363+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:43:34.973+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-2] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id order by o1_0.updated_at desc offset ? rows fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id order by o1_0.updated_at desc offset ? rows fetch first ? rows only
+2026-03-10T17:43:52.423+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:43:53.089+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-3] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username,i1_0.order_id,i1_0.id,i1_0.product_id,p1_0.id,p1_0.description,p1_0.image_url,p1_0.name,p1_0.price,i1_0.quantity from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id left join order_items i1_0 on o1_0.id=i1_0.order_id left join products p1_0 on p1_0.id=i1_0.product_id where o1_0.id=?
+2026-03-10T17:44:26.774+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:44:27.383+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-4] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:45:08.113+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Order Status Scheduler Running ===
+2026-03-10T17:45:08.113+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : Attempting to move all PENDING orders to PROCESSING status...
+2026-03-10T17:45:08.359+05:30 DEBUG 78022 --- [order-processing] [   scheduling-1] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id from orders o1_0 where o1_0.status=?
+2026-03-10T17:45:08.991+05:30  INFO 78022 --- [order-processing] [   scheduling-1] c.e.o.scheduler.OrderStatusScheduler     : === Scheduler execution completed ===
+2026-03-10T17:45:26.772+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:45:27.361+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-6] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:46:26.769+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:46:27.349+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-7] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:47:26.766+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from users u1_0 where u1_0.username=?
+2026-03-10T17:47:27.342+05:30 DEBUG 78022 --- [order-processing] [nio-8080-exec-8] org.hibernate.SQL                        : select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+Hibernate: select o1_0.id,o1_0.created_at,o1_0.shipping_address,o1_0.status,o1_0.updated_at,o1_0.user_id,u1_0.id,u1_0.email,u1_0.name,u1_0.password,u1_0.role,u1_0.username from orders o1_0 join users u1_0 on u1_0.id=o1_0.user_id where o1_0.user_id=? order by o1_0.updated_at desc fetch first ? rows only
+2026-03-10T17:47:51.409+05:30  INFO 78022 --- [order-processing] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-10T17:47:51.412+05:30  INFO 78022 --- [order-processing] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-10T17:47:51.416+05:30  INFO 78022 --- [order-processing] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-10T17:47:51.418+05:30  INFO 78022 --- [order-processing] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-10T17:47:53.782+05:30  INFO 78022 --- [order-processing] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
